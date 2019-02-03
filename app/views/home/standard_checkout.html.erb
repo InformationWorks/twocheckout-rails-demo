@@ -1,0 +1,162 @@
+<div>
+
+  <form action='https://sandbox.2checkout.com/checkout/purchase' method='post'>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">sid</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='sid' value='<%= Rails.application.credentials.twocheckout[:sid] %>' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">mode</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='mode' value='2CO' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">li_0_type</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='li_0_type' value='product' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">li_0_name</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='li_0_name' value='Example Product Name' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">li_0_product_id</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='li_0_product_id' value='Example Product ID' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">li_0_description</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='li_0_description' value='Example Product Description' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">li_0_price</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='li_0_price' value='999' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">li_0_quantity</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='li_0_quantity' value='1' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">li_0_tangible</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='li_0_tangible' value='N' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">card_holder_name</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='card_holder_name' value='Checkout Shopper' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">street_address</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='street_address' value='123 Test St' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">street_address2</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='street_address2' value='Suite 200' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">city</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='city' value='Columbus' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">state</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='state' value='OH' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">zip</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='zip' value='43228' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">country</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='country' value='INR' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">currency_code</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='currency_code' value='INR' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">email</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='email' value='example@2co.com' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">phone</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='phone' value='614-921-2450' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">phone_extension</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='phone_extension' value='197' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">purchase_step</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='purchase_step' value='payment-method' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">x_receipt_link_url</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name="x_receipt_link_url" value="http://localhost:3000/2checkout/order-processed/okay">
+      </div>
+    </div>
+
+    <input name='submit' type='submit' value='Checkout' >
+  </form>
+
+</div>

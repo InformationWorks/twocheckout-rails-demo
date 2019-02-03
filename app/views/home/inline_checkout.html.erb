@@ -1,0 +1,48 @@
+<div>
+
+  <form action='https://sandbox.2checkout.com/checkout/purchase' method='post'>
+    <input type='hidden' name='sid' value='<%= Rails.application.credentials.twocheckout[:sid] %>' />
+    <input type='hidden' name='mode' value='2CO' />
+    <input type='hidden' name='li_0_type' value='product' />
+    <input type='hidden' name='li_0_name' value='invoice123' />
+    <input type='hidden' name='li_0_price' value='999' />
+    <input type='hidden' name='card_holder_name' value='Checkout Shopper' />
+    <input type='hidden' name='street_address' value='123 Test Address' />
+    <input type='hidden' name='street_address2' value='Suite 200' />
+    <input type='hidden' name='city' value='Columbus' />
+    <input type='hidden' name='state' value='OH' />
+    <input type='hidden' name='zip' value='43228' />
+    <input type='hidden' name='country' value='INR' />
+    <input type='hidden' name='email' value='example@2co.com' />
+    <input type='hidden' name='phone' value='614-921-2450' />
+
+    <!-- Order Id from our system -->
+    <input type="hidden" name="merchant_order_id" value="<%= Time.now.to_i %>">
+
+    <!--
+      'x_receipt_link_url' won't work in sandbox mode.
+      Reference Link: http://help.2checkout.com/articles/FAQ/Can-I-specify-the-return-URL-on-the-fly/
+    -->
+    <input type="hidden" name="x_receipt_link_url" value="http://localhost:3000/2checkout/order-processed">
+
+    <input name='submit' type='submit' value='Checkout' />
+  </form>
+
+  <script src="https://www.2checkout.com/static/checkout/javascript/direct.min.js"></script>
+
+  <script type="text/javascript">
+    var myCallback = function(data) {
+        console.log("In myCallback");
+        console.log(JSON.stringify(data));
+        // Example callback data
+        // {"event_type":"checkout_loaded"}
+        // {"event_type":"checkout_closed"}
+    };
+     (function() {
+        console.log("Set 2Checkout callbacks");
+        inline_2Checkout.subscribe('checkout_loaded', myCallback);
+        inline_2Checkout.subscribe('checkout_closed', myCallback);
+     }());
+  </script>
+
+</div>
