@@ -1,8 +1,8 @@
 class TwocheckoutDynamicLinkGenerator
 
-  attr_accessor :name, :merchant, :dynamic, :currency, :return_url, :return_type, :tpl, :prod, :tangible, :price, :type, :qty, :signature, :test
+  attr_accessor :name, :merchant, :dynamic, :currency, :return_url, :return_type, :tpl, :prod, :tangible, :price, :type, :qty, :signature, :test, :order_ext_ref
 
-  def initialize(name:, merchant:, dynamic:, currency:, return_url:, return_type:, tpl:, prod:, tangible:, price:, type:, qty:, test:)
+  def initialize(name:, merchant:, dynamic:, currency:, return_url:, return_type:, tpl:, prod:, tangible:, price:, type:, qty:, test:, order_ext_ref:)
     @name = name
     @merchant = merchant
     @dynamic = dynamic
@@ -16,6 +16,7 @@ class TwocheckoutDynamicLinkGenerator
     @type = type
     @qty = qty
     @test = test
+    @order_ext_ref = order_ext_ref
     @signature = generate_signature
   end
 
@@ -35,6 +36,7 @@ class TwocheckoutDynamicLinkGenerator
       "tangible",
       "type",
       "test",
+      "order_ext_ref",
       "signature"
     ].each do |field_name|
       field_value = self.send("#{field_name}")
@@ -63,6 +65,7 @@ class TwocheckoutDynamicLinkGenerator
 
     [
       "currency",
+      "order_ext_ref",
       "price",
       "prod",
       "qty",

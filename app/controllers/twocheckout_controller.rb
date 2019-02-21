@@ -17,7 +17,8 @@ class TwocheckoutController < ApplicationController
       price: params[:price],
       type: params[:type],
       qty: params[:qty],
-      test: params[:test]
+      test: params[:test],
+      order_ext_ref: params[:order_ext_ref]
     )
 
     redirect_to @link_generator.dynamic_buy_link, allow_other_host: true
