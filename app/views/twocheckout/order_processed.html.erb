@@ -8,6 +8,21 @@
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <td>ref</td>
+      <td><%= @refno %></td>
+    </tr>
+
+    <tr>
+      <td>response_hash_verified</td>
+      <td><%= @response_hash_verified %></td>
+    </tr>
+
+    <tr>
+      <td>reverify</td>
+      <td><%= @reverify %></td>
+    </tr>
+
     <% params.each do |key, value| %>
     <tr>
       <td><%= key %></td>

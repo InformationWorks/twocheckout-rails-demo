@@ -25,6 +25,10 @@ class TwocheckoutController < ApplicationController
   end
 
   def order_processed
+    @received_params = params.stringify_keys
+    @refno = @received_params["refno"]
+    @response_hash_verified = TwocheckoutDynamicLinkGenerator.verify_response_hash(received_params: @received_params)
+    @reverify = TwocheckoutDynamicLinkGenerator.reverify(received_params: @received_params)
   end
 
 end
