@@ -1,0 +1,93 @@
+<div>
+
+  <%= form_tag convert_plus_proceed_to_pay_path, method: :post do %>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">merchant</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='merchant' value='<%= Rails.application.credentials.twocheckout[:merchant_code] %>' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">dynamic</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='dynamic' value='1' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">currency</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='currency' value='USD' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">return-url</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='return_url' value='<%= convert_plus_order_processed_url %>' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">return-type</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='return_type' value='redirect' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">tpl</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='tpl' value='default' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">prod</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='prod' value='12th Commerce' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">tangible</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='tangible' value='0' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">price</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='price' value='20' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">type</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='type' value='product' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">qty</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='qty' value='1' >
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="inputSid" class="col-sm-2 col-form-label">test</label>
+      <div class="col-sm-10">
+        <input type='text' class="form-control" name='test' value='1' >
+      </div>
+    </div>
+
+    <input name='submit' type='submit' value='Proceed to Pay' >
+
+  <% end %>
+
+</div>
